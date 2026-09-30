@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c10378fc3563c47438c8776f3d407c01
+guid: dd7d23aa5d699434b9147422409bc752
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4104267516502305374
-    second: pixilart-drawing (7)_0
+      213: 2422700566318670648
+    second: player-pixilart_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pixilart-drawing (7)_0
+      name: player-pixilart_0
       rect:
         serializedVersion: 2
         x: 14
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5a6b489f8945f830800000000000000
-      internalID: 4104267516502305374
+      spriteID: 833ef8c34592f9120800000000000000
+      internalID: 2422700566318670648
       vertices: []
       indices: 
       edges: []
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      pixilart-drawing (7)_0: 4104267516502305374
+      player-pixilart_0: 2422700566318670648
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

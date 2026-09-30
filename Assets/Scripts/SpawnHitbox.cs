@@ -1,9 +1,7 @@
 using UnityEngine;
 
-public class CameraController : MonoBehaviour
+public class SpawnHitbox : MonoBehaviour
 {
-    GameObject target;
-    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
