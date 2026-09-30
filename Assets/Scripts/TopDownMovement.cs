@@ -1,0 +1,27 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class TopDownMovement : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void Move(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("Moved");
+    }
+
+    public void Run(InputAction.CallbackContext ctx)
+    {
+        Debug.Log("Ran");
+    }
+}
