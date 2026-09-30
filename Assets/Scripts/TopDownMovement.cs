@@ -1,27 +1,47 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+[RequireComponent(typeof(Rigidbody2D))]
 public class TopDownMovement : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float walkSped = 5f;
+    public float runSped = 10f;
+
+    private float currentSped;
+    private Vector2 movement;
+    private Rigidbody2D rb2D;
+    
+
+    void Awake()
+    {
+        rb2D = GetComponent<Rigidbody2D>();
+        currentSped = walkSped;
+    }
+
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        rb2D.linearVelocity = movement * currentSped;
     }
 
     public void Move(InputAction.CallbackContext ctx)
     {
-        Debug.Log("Moved");
+        movement = ctx.ReadValue<Vector2>();
     }
 
     public void Run(InputAction.CallbackContext ctx)
     {
-        Debug.Log("Ran");
+        if (ctx.ReadValue<float>() == 1) /* pressed */
+        {
+            currentSped = runSped;
+        }
+        else // Released
+        {
+            currentSped = walkSped;
+        }
     }
 }
