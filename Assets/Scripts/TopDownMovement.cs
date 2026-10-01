@@ -1,13 +1,15 @@
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class TopDownMovement : MonoBehaviour
 {
-    public float walkSped = 5f;
-    public float runSped = 10f;
-
+    [SerializeField] private float walkSped = 5f;
+    [SerializeField] private float runSped = 10f;
+    
     private float currentSped;
-    private Vector2 movement;
+    private Vector2 movement; //[HideInInspector] public Vector2 movement; DO NOT USE, this is a note for future projects
+    [HideInInspector] public Vector2 direction;
     private Rigidbody2D rb2D;
     
 
@@ -15,6 +17,7 @@ public class TopDownMovement : MonoBehaviour
     {
         rb2D = GetComponent<Rigidbody2D>();
         currentSped = walkSped;
+        direction = Vector2.down;
     }
 
     void Start()
@@ -31,6 +34,11 @@ public class TopDownMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext ctx)
     {
         movement = ctx.ReadValue<Vector2>();
+
+        if(ctx.ReadValue<Vector2>() != Vector2.zero)
+        {
+            direction = ctx.ReadValue<Vector2>();
+        }
     }
 
     public void Run(InputAction.CallbackContext ctx)
