@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+[RequireComponent(typeof(TopDownMovement))]
 
 public class SpawnHitbox : MonoBehaviour
 {
@@ -20,7 +21,11 @@ public class SpawnHitbox : MonoBehaviour
         if(hit)
         {
             Debug.Log(hit.collider.gameObject.name);
-            Destroy(hit.collider.gameObject, 0);
+            if(hit.collider.TryGetComponent(out Stats stats))
+            {
+
+            }
+            // Destroy(hit.collider.gameObject, 0);
         }
     }
 
