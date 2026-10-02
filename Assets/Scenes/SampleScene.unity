@@ -207,7 +207,7 @@ Transform:
   m_GameObject: {fileID: 163555559}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.46, y: -2.07, z: 0}
+  m_LocalPosition: {x: 3.75, y: 1.26, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -271,11 +271,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4374ef32b5b36d45b34cc49ee85ab5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stats
-  maxHealth: 0
+  maxHealth: 100
   currentHealth: 0
-  maxHunger: 0
+  maxHunger: 10
   currentHunger: 0
-  Damage: 0
+  Damage: 10
   isDead: 0
 --- !u!1 &519420028
 GameObject:
@@ -747,7 +747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StatsHud
   stats: {fileID: 1974728323}
   healthBar: {fileID: 1041237603}
-  hungerBar: {fileID: 0}
+  hungerBar: {fileID: 1161932396}
 --- !u!1 &981254684
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,14 +16,18 @@ public class SpawnHitbox : MonoBehaviour
     
     public void Attack(InputAction.CallbackContext ctx)
     {
+        if (ctx.ReadValue<float>() == 0)
+            return;
+
         RaycastHit2D hit = Physics2D.CircleCast(transform.position + (Vector3)topDown.direction, attackRadius, Vector2.zero,0, attackLayer);
         
         if(hit)
         {
             Debug.Log(hit.collider.gameObject.name);
-            if(hit.collider.TryGetComponent(out Stats stats))
+            if(hit.collider.TryGetComponent(out Stats targetStats) && TryGetComponent(out Stats playerStats))
             {
-
+                float CalculatedDamage = playerStats.Damage;
+                targetStats.currentHealth -= CalculatedDamage;
             }
             // Destroy(hit.collider.gameObject, 0);
         }

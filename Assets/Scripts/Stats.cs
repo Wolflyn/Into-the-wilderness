@@ -18,4 +18,22 @@ public class Stats : MonoBehaviour
         currentHealth = maxHealth;
         currentHunger = maxHunger;
     }
+
+    private void Update()
+    {
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
+
+        if (currentHealth > maxHealth)
+        {
+            currentHealth = maxHealth;
+        }
+
+        if (currentHunger > maxHunger)
+        {
+            currentHunger = maxHunger;
+        }
+    }
 }
