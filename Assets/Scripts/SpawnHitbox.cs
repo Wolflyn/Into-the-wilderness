@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(TopDownMovement))]
+[RequireComponent(typeof(Stats))]
 
 public class SpawnHitbox : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class SpawnHitbox : MonoBehaviour
     public LayerMask eatLayer;
     private TopDownMovement topDown;
     private float foodValue = 5;
+    //private Stats playerStats;
 
 
     void Awake()
@@ -39,9 +41,11 @@ public class SpawnHitbox : MonoBehaviour
         {
             Debug.Log(eat.collider.gameObject.name);
 
-            if (eat.collider.TryGetComponent(out Stats playerStats)) // FIX THISSS!!!! how to get it off player stats and on player script stats(make a new get component to grap script)
+            if (TryGetComponent(out Stats playerStats)) // FIX THISSS!!!! how to get it off player stats and on player script stats(make a new get component to grap script)
             {
-                playerStats.currentHunger += foodValue;
+
+                //playerStats = GetComponent<Stats>(); // (code destroys player for some reason(DO NOT TURN ON))
+                playerStats.currentHunger += foodValue; 
                 Destroy(eat.collider.gameObject, 0);
             }
             
