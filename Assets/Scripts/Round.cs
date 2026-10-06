@@ -21,39 +21,6 @@ public class Round : MonoBehaviour
 
 
 /*
-     Changes to stats:
-
-        [hideInInspector]public int score = 0;
-        
-            //stat upgrades
-        // low = 1
-        // high = 3
-        [range: 1-3]public int healthLvl = 1;
-        [range: 1-3]public int damageLvl = 1; 
-        [range: 1-3]public int spedLvl = 1;
-
-        Update()
-        {
-            
-           maxHealth = healthLvl*10;
-           damage = damageLvl*2;
-            
-        }
-*/
-
-/*
-    changes to TopDownMovement 
-    
-    get script.player(stats)*;
-    
-    Update()
-    {
-        runSped = player.spedLvl*10;
-    }
-*/
-
-
-/*
    current script:
 
    get script.player(stats)*;
@@ -65,9 +32,6 @@ public class Round : MonoBehaviour
         
         Ratio change();
      }
-
-    
-
 
      began()
      {
@@ -91,7 +55,7 @@ public class Round : MonoBehaviour
     Ratio Change()
         {
             timeController.pause();
-            change a stat by -1 thats above zero();
+            change a stat by -1 thats above minimum();
             change a stat by 1 thats below maximum();
             began()
         }

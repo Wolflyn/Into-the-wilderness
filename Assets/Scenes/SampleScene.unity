@@ -1753,6 +1753,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3801315930382733964, guid: 298cdedb3a7128c4aa9cf194a98868b8, type: 3}
+      propertyPath: spedLvl
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801315930382733964, guid: 298cdedb3a7128c4aa9cf194a98868b8, type: 3}
+      propertyPath: damageLvl
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3801315930382733964, guid: 298cdedb3a7128c4aa9cf194a98868b8, type: 3}
+      propertyPath: healthLvl
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8554675566936630535, guid: 298cdedb3a7128c4aa9cf194a98868b8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1898,6 +1910,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7435952832749473165, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
+      propertyPath: spedLvl
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7435952832749473165, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
+      propertyPath: damageLvl
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7435952832749473165, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
+      propertyPath: healthLvl
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -1930042984427848710, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
       propertyPath: eatLayer.m_Bits
       value: 64
@@ -1949,6 +1973,14 @@ PrefabInstance:
     - target: {fileID: 3667205153190936949, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135095683235660771, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5135095683235660771, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8171771238977869906, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
       propertyPath: m_ActionEvents.Array.size

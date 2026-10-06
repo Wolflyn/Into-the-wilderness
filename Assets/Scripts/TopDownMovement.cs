@@ -1,11 +1,10 @@
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class TopDownMovement : MonoBehaviour
 {
     [SerializeField] private float walkSped = 5f;
-    public float runSped = 10f;
+    [SerializeField] private float runSped = 10f;
     
     private float currentSped;
     private Vector2 movement; //[HideInInspector] public Vector2 movement; DO NOT USE, this is a note for future projects
@@ -28,6 +27,8 @@ public class TopDownMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        TryGetComponent(out Stats playerStats);
+        runSped = playerStats.spedLvl * 10;
         rb2D.linearVelocity = movement * currentSped;
     }
 
