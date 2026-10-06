@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class TopDownMovement : MonoBehaviour
 {
     [SerializeField] private float walkSped = 5f;
-    [SerializeField] private float runSped = 10f;
+    public float runSped = 10f;
     
     private float currentSped;
     private Vector2 movement; //[HideInInspector] public Vector2 movement; DO NOT USE, this is a note for future projects
