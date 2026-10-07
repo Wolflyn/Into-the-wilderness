@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Round : MonoBehaviour
 {
-    
 
+    public bool pause = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -24,20 +24,19 @@ public class Round : MonoBehaviour
    current script:
 
    get script.player(stats)*;
-   get script.Enemyspawn*;
-   get script.timeController;
+   
 
      Awake()
      {
-        
-        Ratio change();
+        Ratio change()*;
      }
 
      began()
      {
+        get script.Enemyspawn*;
         Enemyspawn*.SpawnEnemies(); // enemy spawn(controls what stats enemies spawn with too)
         Stats.Start()*; // resets stats
-        timeController.Unpause(); // allows for player and enemies to input. enables decay
+        pause = false;
 
         if(enemy killed)
         {
@@ -54,10 +53,10 @@ public class Round : MonoBehaviour
 
     Ratio Change()
         {
-            timeController.pause();
+            pause = true;
             change a stat by -1 thats above minimum();
             change a stat by 1 thats below maximum();
-            began()
+            began()*
         }
 
    */

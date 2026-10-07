@@ -34,11 +34,17 @@ public class TopDownMovement : MonoBehaviour
 
     public void Move(InputAction.CallbackContext ctx)
     {
-        movement = ctx.ReadValue<Vector2>();
-
-        if(ctx.ReadValue<Vector2>() != Vector2.zero)
+        TryGetComponent<Round>(out Round round);
+        if (round.pause == false)
         {
-            direction = ctx.ReadValue<Vector2>();
+            movement = ctx.ReadValue<Vector2>();
+
+            
+           
+            if (ctx.ReadValue<Vector2>() != Vector2.zero)
+            {
+                direction = ctx.ReadValue<Vector2>();
+            }
         }
     }
 
