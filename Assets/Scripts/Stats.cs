@@ -10,6 +10,7 @@ public class Stats : MonoBehaviour
     [Range(1,3)] public int healthLvl = 1;
     [Range(1,3)] public int damageLvl = 1;
     [Range(1,3)] public int spedLvl = 1;
+    public int totalLvl = 0;
 
     [Header("Bars")]
     public float maxHealth;
@@ -32,6 +33,8 @@ public class Stats : MonoBehaviour
 
     private void Update()
     {
+
+        totalLvl = healthLvl + damageLvl + spedLvl;
         maxHealth = healthLvl * 10;
         Damage = damageLvl * 2;
 
