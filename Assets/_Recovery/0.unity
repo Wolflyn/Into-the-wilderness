@@ -572,22 +572,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 203073243667543247, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
       propertyPath: spedLvl
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 203073243667543247, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
-      propertyPath: damageLvl
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 203073243667543247, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
       propertyPath: healthLvl
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3816448083816924953, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3568049694107992421, guid: a01407fd03ce8764e89c27b8fbdd7d96, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

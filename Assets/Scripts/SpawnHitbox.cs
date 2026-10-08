@@ -50,7 +50,7 @@ public class SpawnHitbox : MonoBehaviour
                 if (TryGetComponent(out Stats playerStats)) // FIX THISSS!!!! how to get it off player stats and on player script stats(make a new get component to grap script)
                 {
 
-                  //playerStats = GetComponent<Stats>(); // (code destroys player for some reason(DO NOT TURN ON))
+                  //playerStats = GetComponent<Stats>(); // (code destroys player camera output for some reason(DO NOT TURN ON))
                  playerStats.currentHunger += foodValue;
                   Destroy(eat.collider.gameObject, 0);
                 }
