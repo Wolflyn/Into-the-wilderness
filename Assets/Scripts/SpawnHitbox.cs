@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SocialPlatforms.Impl;
 [RequireComponent(typeof(TopDownMovement))]
 [RequireComponent(typeof(Stats))]
 
@@ -37,6 +38,12 @@ public class SpawnHitbox : MonoBehaviour
                 {
                     float CalculatedDamage = playerStats.Damage;
                     targetStats.currentHealth -= CalculatedDamage;
+                    if(targetStats.currentHealth <= 0)
+                    {
+                        playerStats.score += 1;
+                    }
+
+
                 }
                 // Destroy(hit.collider.gameObject, 0);
             }

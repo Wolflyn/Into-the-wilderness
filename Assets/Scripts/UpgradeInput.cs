@@ -26,8 +26,7 @@ public class UpgradeInput : MonoBehaviour
             DamageUp();
         }
 
-        Debug.Log(StatController);
-            //StatController
+        //Debug.Log(StatController);
     }
 
 

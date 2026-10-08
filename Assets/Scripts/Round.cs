@@ -1,7 +1,6 @@
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
+using System.Collections;
+
 [RequireComponent(typeof(UpgradeInput))]
 
 public class Round : MonoBehaviour
@@ -15,7 +14,7 @@ public class Round : MonoBehaviour
     {
         TryGetComponent<UpgradeInput>(out UpgradeInput UpgrdTnpt);
         UpgrdTnpt.StatController = 0;
-        RatioChange();
+        StartCoroutine(RatioChange());
     }
 
     // Update is called once per frame
@@ -24,7 +23,7 @@ public class Round : MonoBehaviour
         
     }
 
-     public void RatioChange()
+     public IEnumerator RatioChange()
     {
         
         TryGetComponent<UpgradeInput>(out UpgradeInput UpgrdTnpt);
@@ -34,14 +33,23 @@ public class Round : MonoBehaviour
         
             pause = true;
 
-       
-        while(UpgrdTnpt.StatController != 0)
-        {
 
-        }
+        //(UpgrdTnpt.StatController != 0)
+        yield return new WaitUntil(() => UpgrdTnpt.StatController == 0);
+
+
+
             UpgrdTnpt.disable();
-       
-        //began() *
+            
+
+        Play();
+    }
+
+    public void Play()
+    {
+        TryGetComponent<Stats>(out Stats Stats);
+        pause = false;
+        Stats.reset();
     }
 }
 
@@ -52,11 +60,6 @@ public class Round : MonoBehaviour
 
    get script.player(stats)*;
    
-
-     Awake()
-     {
-        Ratio change()*;
-     }
 
      began()
      {

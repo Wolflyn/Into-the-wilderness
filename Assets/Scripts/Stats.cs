@@ -23,10 +23,16 @@ public class Stats : MonoBehaviour
     public float Damage;
 
     public bool isDead;
-
+    
     private void Start()
     {
         score = 0;
+        currentHealth = maxHealth;
+        currentHunger = maxHunger;
+    }
+
+    public void reset()
+    {
         currentHealth = maxHealth;
         currentHunger = maxHunger;
     }
