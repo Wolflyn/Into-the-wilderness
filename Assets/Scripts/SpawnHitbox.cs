@@ -40,7 +40,9 @@ public class SpawnHitbox : MonoBehaviour
                     targetStats.currentHealth -= CalculatedDamage;
                     if(targetStats.currentHealth <= 0)
                     {
+                        GameObject.Find("Enemy Spawner").TryGetComponent<EnemySpawn>(out EnemySpawn Spawner);
                         playerStats.score += 1;
+                        Spawner.enemyAmount += 1;
                     }
 
 

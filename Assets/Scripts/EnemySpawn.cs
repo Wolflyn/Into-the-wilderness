@@ -5,17 +5,12 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private GameObject enemyPrefab;
 
     private bool roundStart;
+    public int enemyAmount=0;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void SpawnEnemy()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Instantiate(enemyPrefab, transform.position, Quaternion.identity);
+        enemyAmount += 1;
     }
 }

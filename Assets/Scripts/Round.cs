@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 [RequireComponent(typeof(UpgradeInput))]
 
@@ -40,48 +41,25 @@ public class Round : MonoBehaviour
 
 
             UpgrdTnpt.disable();
-            
-
+        
+        
         Play();
     }
 
     public void Play()
     {
         TryGetComponent<Stats>(out Stats Stats);
+        GameObject.Find("Enemy Spawner").TryGetComponent<EnemySpawn>(out EnemySpawn Spawner);
         pause = false;
         Stats.reset();
+        Spawner.SpawnEnemy();
+
+        //if (Spawner.enemyAmount <= 0)
+        //{
+        //    Ratio change();
+        //}
+
     }
 }
 
-
-
-/*
-   current script:
-
-   get script.player(stats)*;
-   
-
-     began()
-     {
-        get script.Enemyspawn*;
-        Enemyspawn*.SpawnEnemies(); // enemy spawn(controls what stats enemies spawn with too)
-        Stats.Start()*; // resets stats
-        pause = false;
-
-        if(enemy killed)
-        {
-            if(player.TryGetComponent(out Stats playerStats)*)
-            {
-             playerStats*.score += 1;
-            }
-        }
-        if(enemyAmount <= 0)
-        {
-            Ratio change();
-        }
-       }
-
-    
-
-   */
 

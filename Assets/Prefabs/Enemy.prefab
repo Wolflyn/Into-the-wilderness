@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1632657243758591640}
   - component: {fileID: 6502735810957413657}
   - component: {fileID: 3801315930382733964}
+  - component: {fileID: -4750253905133722803}
   m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 669944162933162754}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.75, y: 1.26, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -152,9 +153,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4374ef32b5b36d45b34cc49ee85ab5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Stats
+  healthLvl: 3
+  damageLvl: 3
+  spedLvl: 1
+  totalLvl: 0
   maxHealth: 100
   currentHealth: 0
   maxHunger: 10
   currentHunger: 0
+  score: 0
   Damage: 10
   isDead: 0
+--- !u!114 &-4750253905133722803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669944162933162754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1145758c84b72545a075c87a7422819, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FollowMovement
+  target: {fileID: 0}
+  Sped: 2
+  offset: {x: 0, y: 0, z: 0}
